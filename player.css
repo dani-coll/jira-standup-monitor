@@ -1,0 +1,71 @@
+#jira-standup-player {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background: #205081;
+  padding: 4px 40px;
+}
+
+.jira-standup-button {
+  border: 1px solid #3572b0;
+  color: #3572b0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.jira-standup-button:active {
+  opacity: 0.5;
+}
+
+.jira-standup-button:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.jira-standup-main-button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.jira-standup-button::after {
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+#jira-standup-next:after {
+  content: url('/images/next.svg');
+}
+
+#jira-standup-postpone:after {
+  content: url('/images/postpone.svg');
+}
+
+#jira-standup-skip:after {
+  content: url('/images/skip.svg');
+}
+#jira-standup-previous:after {
+  content: url('/images/previous.svg');
+}
+.jira-standup-play::after {
+  content: url('/images/play.svg');
+  margin-left: 6px;
+}
+.jira-standup-pause::after {
+  content: url('/images/pause.svg');
+  margin-left: 6px;
+}
+.jira-standup-show-highlights::after {
+  content: url('/images/show-highlights.svg');
+  margin-left: 5px;
+  transform: scale(1.3);
+}

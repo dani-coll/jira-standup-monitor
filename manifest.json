@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Jira Standup Monitor",
+  "description": "Ramondly decides who's next on standups",
+  "version": "3.4.0",
+
+  "browser_action": {
+    "default_icon": "ramondly.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["JIRA_BASE_URL/secure/RapidBoard.jspa"],
+      "js": ["main.js"],
+      "css": ["highlights.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "confetti.css",
+    "images/gold.png",
+    "images/silver.png",
+    "images/copper.png",
+    "images/next.svg",
+    "images/pause.svg",
+    "images/play.svg",
+    "images/postpone.svg",
+    "images/previous.svg",
+    "images/skip.svg",
+    "images/show-highlights.svg",
+    "highlights.css",
+    "player.css"
+  ],
+  "permissions": ["activeTab", "storage", "tabs", "clipboardWrite", "clipboardRead"]
+}

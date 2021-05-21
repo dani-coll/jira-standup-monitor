@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jira Standupizer</title>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+    <script src="main.js"></script>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div id="main-view">
+      <div id="player-section">
+        <h1>Jira Standup Monitor</h1>
+        <div class="subtitle">Ramondly decide who's next</div>
+        <img src="ramondly.png" />
+
+        <div id="player-container">
+          <button id="show-player">Show player</button>
+          <button id="clear">Clear Data</button>
+        </div>
+      </div>
+      <div id="no-active-sprint">
+        <div>
+          <i
+            >Go to the Active Sprint view<br />
+            in order to use the Standup Player
+          </i>
+        </div>
+      </div>
+      <button id="show-extractor">Sprint Data Extractor</button>
+    </div>
+    <div id="extractor-view">
+      <div id="short-guide" class="subtitle">It copies to your clipboard a <b>curl</b> command about your sprint tasks</div>
+      <div id="long-guide">
+        <div>1 - Set the $TENANT_TOKEN variable on your terminal `export TENANT_TOKEN=myToken`</div>
+        <div>1 - Replace</div>
+        <div>2 - Go to your backlog sprint and and remove all the filters</div>
+        <div>3 - Select the sprint and Copy the curl command to your clipboard</div>
+        <div>4 - Paste it on your terminal</div>
+        <div>5 - Enjoy your new dashboard or pie chart</div>
+        <div><i>* It is recommended to use Git Bash Terminal on Windows</i></div>
+      </div>
+      <div id="sprint-name-row">
+        <span>Sprint Name</span>
+        <select name="sprint-name" id="sprint-name"></select>
+      </div>
+      <div id="no-sprint-found">No Sprint was found. Go to your JIRA Backlog to use this tool</div>
+      <br />
+      <button id="copy-dashboard-http-post">Copy Dashboard Cmd</button>
+      <button id="copy-metric-http-post">Copy Pie Data Cmd</button>
+      <br />
+      <br />
+      <button id="go-back">Go Back</button>
+      <br />
+      <br />
+
+      <button id="show-guide" class="underline-button">How do I use this tool?</button>
+
+      <button id="show-deprecated-actions" class="underline-button">Show deprecated actions</button>
+      <div id="deprecated-actions">
+        <h3>Deprecated actions</h3>
+        <button id="copy-title">Copy Title</button>
+        <button id="copy-features">Copy Features</button>
+        <button id="copy-backports">Copy Backports</button>
+        <button id="copy-researches">Copy Researches</button>
+        <br />
+        <br />
+        <button id="copy-all">Copy All Dashboard</button>
+        <button id="paste-all">Paste All Dashboard</button>
+      </div>
+    </div>
+    <div></div>
+  </body>
+</html>
